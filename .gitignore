@@ -4,3 +4,7 @@
 /.idea/inspectionProfiles/profiles_settings.xml
 /.idea/uv-demo.iml
 /.idea/vcs.xml
+/.idea
+# 虚拟环境（如果有）
+/.venv
+/lesson/知识.txt
