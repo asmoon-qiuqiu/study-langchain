@@ -1,9 +1,9 @@
-from langchain_ollama import OllamaLLM
+from langchain_ollama import ChatOllama
 # 导入最新提示词模板
 from langchain_core.prompts import ChatPromptTemplate
 
 # 1. 初始化模型
-llm = OllamaLLM(model="deepseek-v3.1:671b-cloud", temperature=0.1)
+llm = ChatOllama(model="llama3.2", temperature=0.1)
 
 # 2. 创建提示词模板
 prompt = ChatPromptTemplate.from_messages([
@@ -16,4 +16,4 @@ chain = prompt | llm
 
 # 4. 运行
 result = chain.invoke({"topic": "什么是 LCEL"})
-print(result)
+print(result.content)
